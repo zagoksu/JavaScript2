@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>About Me</title>
+<style>
+
+.list-item {
+color: red;
+}
+
+
+</style>
+
+  </head>
+  <body>
+    <h1>About Me</h1>
+
+    <ul>
+      <li>Nickname: <span id="nickname"></span></li>
+      <li>Favorite food: <span id="fav-food"></span></li>
+      <li>Hometown: <span id="hometown"></span></li>
+    </ul>
+    <script>
+      // changing font-family
+    document.body.style.fontFamily = "Arial, sans-serif";
+
+    //replacing the spans 
+    let nickName = document.getElementById("nickname");
+    let favFood = document.getElementById("fav-food");
+    let homeTown = document.getElementById("hometown");
+    nickName.textContent = "zagoksu";
+    favFood.textContent = "lahmacun";
+    homeTown.textContent = "Sinop";
+
+    // iterating through each li
+    let listItems =  document.getElementsByTagName("li");
+    for (i = 0; i < listItems.length; i++){
+      listItems[i].classList.add("list-item");
+    }
+
+    // creating img element
+    let newImage = document.createElement("img");
+    newImage.src = "https://i.imgur.com/L12jMGR.jpg" ;
+    newImage.setAttribute('alt', 'picture of me')
+    // resizing the image to fit to the page
+    newImage.style.width = "20%";
+    // appending image to the page
+    document.body.appendChild(newImage);
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+ 

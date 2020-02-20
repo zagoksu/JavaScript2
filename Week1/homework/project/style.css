@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: orange;
+}
+
+#main {
+  background-color: #f5f5f5;
+  margin-top: 10%;
+  width: 70%;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#text-container {
+  width: 80%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#quote {
+  color: orange;
+  font-size: 2rem;
+  text-align: justify;
+}
+
+#author {
+  color: orange;
+  font-size: 1.1rem;
+  text-align: right;
+}
+
+#quote::before {
+  content: '\201C';
+  font-size: 6rem;
+ }
+
+#author::before {
+  content: '\2013';
+  font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+#button-container {
+  display: flex;
+  width: 80%;
+  height: 20vh;
+  margin-top: 20px;
+}
+
+#icons{
+  justify-content: space-between;
+  width: 30%;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+
+.fa-twitter, .fa-tumblr {
+  color: white;
+  background-color: orange;
+  padding: 10px;
+  margin: 5px;
+  height: 3rem;
+  width: 3rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+#buttons{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#btn {
+  background-color: orange;
+  color: #f5f5f5;
+  font-size: 1.1rem;
+  font-family: "Times New Roman", Times, serif;
+  padding: 10px;
+  justify-content: flex-end;
+  width: 8rem;
+  height: 3rem;
+}

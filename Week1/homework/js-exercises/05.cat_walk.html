@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Cat Walk</title>
+    <style>
+        #cat {
+          position: absolute;
+          left: 0px;
+        }
+    </style>
+  </head>
+  <body>
+    <img id = "cat" src="http://www.anniemation.com/clip_art/images/cat-walk.gif"/>
+  <script>
+      'use strict';
+      let catImage = document.querySelector('body img');
+      let pageWidth = document.documentElement.clientWidth;
+      let midWidth = pageWidth / 2 - catImage.width / 2;
+      let distanceToLeft = 0;
+
+      function walkTheCat(){
+        // to call the function every 50 milliseconds
+        let walk= setInterval(myCallBack, 50);
+       
+          function myCallBack() {
+           // to walk the cat
+          if (midWidth - distanceToLeft > 10 || (distanceToLeft > midWidth && distanceToLeft < (pageWidth- catImage.width/2))) {
+            catImage.style.left = distanceToLeft + 'px';
+            distanceToLeft += 10;
+          // when the cat reaches to the end of the page  
+          } else if (distanceToLeft >= (pageWidth- catImage.width/2)) {
+            distanceToLeft = 0;
+          //when cat reaches the middle of the page 
+          } else {
+            catImage.setAttribute('src', 'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif');
+            clearInterval(walk);
+            setTimeout(function frame() {
+              catImage.setAttribute('src', 'http://www.anniemation.com/clip_art/images/cat-walk.gif');
+              return walkTheCat();
+            }, 5000);
+            distanceToLeft += 10;
+          }
+          }
+      }
+      requestAnimationFrame(walkTheCat); // :)) does this count?
+      
+    </script>
+  </body>
+</html>

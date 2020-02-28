@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-weight: bold;
+};
+
+
+body{
+    background-color: black;
+    font-size:rem ;
+    color: white;
+}
+
+#main-container{
+    font-size: 1.2rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: black;  
+    }
+
+#main{
+    text-align: center;
+    margin: auto;
+    padding: 50px;
+    width: 55%;
+    height: 100vh;
+    color: white;
+    background-color:#1E555C;
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    width: 80%;
+    font-size: 1.8rem;
+
+}
+.container{
+    margin: auto;
+    height: 20vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container#counter{
+    height: 30vh;
+    border: 7px solid #14363A;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#counter p{
+    font-size: 2rem;
+}
+
+#timer {
+   font-size: 3.5rem;
+   font-family: 'Orbitron', sans-serif;
+}
+
+#session-length {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#session-length p {
+    font-size: 2rem;
+}
+
+#session-arrows{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+}
+    
+.arrow {
+    padding: 0.2rem;
+}
+    
+
+.fa-play, .fa-pause{
+    padding: 5px;
+} 
+
+.container#clock-actions{
+    height: 10vh;
+}
+
+button{
+    color: wheat;
+    padding: 0;
+    border: none;
+    background: none;
+}

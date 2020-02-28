@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Clock</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div id="main-container">
+<div id="main">
+    <div class="container" id="header">
+        <h1 id="">Pomodoro Clock</h1>
+    </div>
+    <div class="container" id="session-length">
+         <div><p>Session Length</p></div> 
+        <div id="session-arrows">
+            <div class="arrow"><button style="font-size:24px"> <i class="fa fa-arrow-down" id="button-down"></i></button> </div>
+            <div class="arrow"> <p style="font-size: 2.2rem; ;"><span id="start-value">25</span></p></div> 
+            <div class="arrow"><button style="font-size:24px"><i class="fa fa-arrow-up" id="button-up"></i></div>
+    </div>
+</div> 
+    <div class="container" id="counter">
+        <p>Session</p>
+        <div id="timer">
+            <div id="pomodoro-timer">
+                <span id="minutes">25</span>
+                <span id="colon">:</span>
+                <span id="seconds">00</span>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="clock-actions">
+        <button id="pomodoro-start" style="font-size:24px">  <i class="fa fa-play"></i></button>
+        <button id="pomodoro-pause" style="font-size:24px">  <i class="fa fa-pause"></i></button>
+    </div>
+</div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

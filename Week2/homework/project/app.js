@@ -22,7 +22,7 @@ btnDown.addEventListener('click', function(){
  })
 
 btnUp.addEventListener('click',function(){
-  if(startValue.innerHTML < 25 && running === false){
+  if(running === false){
     startValue.innerHTML++;
     seconds = seconds + 60; 
   }
@@ -50,7 +50,7 @@ pauseBtn.addEventListener('click', () =>{
 // Timer function which handles countdown and display message when timer is 0.
 function timer() {
   seconds--;
-  if (seconds < 0) {
+  if (seconds <= 0) {
     clearInterval(countdown);
     seconds = workTime * 60;
     counter.innerHTML = "Time's Up!";

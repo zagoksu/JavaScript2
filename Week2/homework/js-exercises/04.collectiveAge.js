@@ -8,50 +8,43 @@ const hackYourFutureMembers = [
   ];
 //  first way
 
-  function combinedAges(arr){
-  let ages = arr.map(member => member.age)
-   return sumAges(ages)
-}
+// creating array of ages 
+let ages = hackYourFutureMembers.map(member => member.age)
 
-function sumAges(arr){
+// console.log(ages) // prints [ 33, 32, 27, 22 ]
+
+let sumAges = function(arr) {
   let total = arr.reduce(((acc, age) => acc + age), 0);
-  console.log(`The collective age of the HYF team is: ${total}`);
+  return total;
 }
 
-combinedAges(hackYourFutureMembers)
+//  console.log(sumAges(ages)); prints 114
 
-
- // second way              
- /*
-function getAges(arr){
-   return arr.map(elem => elem.age).reduce((acc, elem) => acc + elem);
+function collectiveAges(callback, arr){
+  let combinedAges = callback(arr);
+  console.log(`The collective age of the HYF team is: ${combinedAges}`);
 }
 
-function printAges(callback){
-  return `The collective age of the HYF team is: ${callback}` 
-}
+collectiveAges(sumAges, ages)
 
-console.log(printAges(getAges(hackYourFutureMembers)));
 
-*/
+/*  second way  */
 
-/* third way
-
-let sumOfAges = hackYourFutureMembers.reduce((total, item) => {
-  return  total + item.age ;
-}, 0)
-
-console.log(sumOfAges)
-//114
-*/
-
-// fourth way
 /*
-let printAges = function(arr){
+let sumAges = function(arr) {
+  let total = arr
+              .map(member => member.age)
+              .reduce(((acc, age) => acc + age), 0);
+  return total;
+}
 
-    let callback = arr.map(elem => elem.age).reduce((acc, value) => acc + value)
-    console.log(`The collective age of the HYF team is: ${callback}.`)
-  }
+function collectiveAges(callback, arr){
+  let combinedAges = callback(arr);
+  console.log(`The collective age of the HYF team is: ${combinedAges}`);
+}
 
-printAges(hackYourFutureMembers);
+collectiveAges(sumAges, hackYourFutureMembers)
+
 */
+
+

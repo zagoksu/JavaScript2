@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="main-container">
+        <div id="main">
+            <div id="tip-calculator" >
+                <div id="header">
+                    <h1>TIP CALCULATOR</h1>
+                </div>
+                <div id="inner-calculator">
+                    <form action="">
+                    <div class="box"><p>How much was your bill?</p>
+                        $ <input id="bill" type="number" > 
+                    </div>
+                    <div class="box"><p>How was your service?</p>
+                        <select class="service" name="service" id="service">
+                        <option value="">-- Choose an Option --</option>
+                        <option class="service" value="30">30% - Outstanding</option>
+                        <option class="service" value="20">20% - Good</option>
+                        <option class="service" value="15">15% - It was OK</option>
+                        <option class="service" value="10">10% - Bad</option>
+                        <option class="service" value="5">5% - Terrible</option>
+                        </select>
+                    </div>
+                    <div class="box"><p>How many people are sharing the bill?</p>
+                            <input id="person" type="number"> people 
+                    </div>
+                </form>
+                    <div class="box"id="button">
+                        <button class="service" id="calc">CALCULATE!</button>
+                    </div>
+                    <div class="box" id="show-tip">
+                        <p>TIP AMOUNT</p>
+                        <p id="result">$</p>
+                        <p id="each">EACH</p>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

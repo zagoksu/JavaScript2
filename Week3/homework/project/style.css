@@ -1,0 +1,140 @@
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    font-size: 14px;
+}
+
+#main-container{
+    font-weight: bold;
+    font-size: 0.8rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: black;  
+}
+
+#main {
+    text-align: center;
+    margin: auto;
+    padding: 50px;
+    width: 55%;
+    height: 100%;
+    color: white;
+    background-color:#67160B;
+    display: flex;
+    flex-direction: column;
+}
+
+#header{
+    background-color: #1F020B;
+    height: 5vh;
+    font-size: 0.6rem;
+}
+
+.box p {
+    text-align: left;
+
+}
+#show-tip p{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#tip-calculator {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 300px;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#inner-calculator{
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+    background-color: white;
+    color: black;
+}
+
+.box{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+input, select{
+    width: 80%;
+    height: 20px;
+    padding: 12px 0 12px 0;
+    margin-top: 5px;
+    align-content: left;
+}
+
+select {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+}
+
+#calc {
+    background-color: rgb(159, 39, 61);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    height: 40px;
+    margin: 20px;
+    outline: none;
+    box-shadow: 0px 5px 10px rgb(51, 50, 50);
+}
+
+#calc:hover {
+    cursor: pointer;
+    color: white;
+    background-color:#67160B;
+}
+
+@media only screen and (max-width:650px){
+    #main {
+        text-align: center;
+        margin: auto;
+        padding: 10px;
+        width: 70%;
+        height: 100vh;
+    }
+
+    #tip-calculator {
+        width: 300px;
+        height: 90vh;
+    }
+
+    #calc {
+        border-radius: 5px;
+        width: 50%;
+        height: 30px;
+        margin: 0px;
+    }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 1100px) {
+    #main {
+        text-align: center;
+        margin: auto;
+        padding: 10px;
+        width: 60%;
+        height: 100vh;
+    }
+
+    #tip-calculator {
+        width: 300px;
+        height: 90vh;
+    }
+}
+
+
